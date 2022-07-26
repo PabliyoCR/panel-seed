@@ -1,0 +1,126 @@
+@mixin rotate($angle) {
+  -moz-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+@mixin arrow($arrowSize: 20px, $arrowBorderSize: 3px, $arrowBarWidth: 2px, $arrowBarHeight: 25px) {
+  display: inline-block;
+  height: $arrowSize;
+  position: relative;
+  width: $arrowSize;
+
+  &::after {
+    border-bottom-style: solid;
+    border-bottom-width: $arrowBorderSize;
+    border-right-style: solid;
+    border-right-width: $arrowBorderSize;
+    content: '';
+    display: inline-block;
+    height: $arrowSize;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $arrowSize;
+  }
+
+  // Arrow Bar
+  &.arrow-bar::before {
+    bottom: 1px;
+    content: '';
+    height: $arrowBarHeight;
+    position: absolute;
+    right: 0;
+    transform-origin: bottom;
+    width: $arrowBarWidth;
+    @include rotate(-45deg);
+  }
+
+  // States
+  &.is-top {
+    @include rotate(225deg);
+  }
+
+  &.is-bottom {
+    @include rotate(45deg);
+  }
+}
+
+@mixin arrowColor($color) {
+
+  &,
+  .arrow {
+    &::after {
+      border-color: $color;
+    }
+
+    &.is-triangle::after {
+      border-color: transparent;
+      border-bottom-color: $color;
+    }
+
+    &::before {
+      background-color: $color;
+    }
+  }
+}
+
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+  $extmods: (eot: "?", svg: "#"+ str-replace($name, " ", "_"));
+  $formats: (otf: "opentype", ttf: "truetype");
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src: $src;
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin fontsize($size, $sizeMd: $size) {
+  @if ($sizeMd) {
+    font-size: toREMMobile($size);
+  }
+
+  @else {
+    font-size: toREM($size);
+  }
+
+  @media (min-width: 768px) {
+    font-size: toREM($sizeMd);
+  }
+}

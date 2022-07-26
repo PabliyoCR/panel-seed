@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsPanelSeed",
+  "title": "Panels Seed Schema",
+  "type": "object",
+  "properties": {
+    "fontSize": {
+      "type": "string",
+      "description": "Font Size",
+      "x-prompt": "font-size?"
+    },
+    "panelOrientation": {
+      "type": "string",
+      "description": "Panel Orientation (Portrait / Landscape)",
+      "enum": ["portrait", "landscape"],
+      "x-prompt": {
+        "message": "Panel Orientation?",
+        "type": "list",
+        "items": [
+          { "value": "portrait", "label": "Portrait" },
+          { "value": "landscape", "label": "Landscape" }
+        ]
+      }
+    },
+    "vw": {
+      "type": "string",
+      "description": "VW",
+      "x-prompt": "viewport width (px)?"
+    },
+    "vh": {
+      "type": "string",
+      "description": "VH",
+      "x-prompt": "viewport height (px)?"
+    }
+  },
+  "required": ["fontSize", "panelOrientation"]
+}

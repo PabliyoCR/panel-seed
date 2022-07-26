@@ -1,0 +1,42 @@
+// // // Modals
+
+// // // scss-docs-start modal-variables
+// // $modal-inner-padding:               $spacer ;
+
+// // $modal-footer-margin-between:       .5rem ;
+
+// // $modal-dialog-margin:               .5rem ;
+// // $modal-dialog-margin-y-sm-up:       1.75rem ;
+
+// // $modal-title-line-height:           $line-height-base ;
+
+// // $modal-content-color:               null ;
+$modal-content-bg: $white;
+$modal-content-border-color: $green;
+$modal-content-border-width: 1px;
+$modal-content-border-radius: toREM(22);
+// $modal-content-border-radius-desktop: toREM(22);
+// // $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) ;
+// // $modal-content-box-shadow-xs:       $box-shadow-sm ;
+// // $modal-content-box-shadow-sm-up:    $box-shadow ;
+
+// $modal-backdrop-bg: rgba(#501219, 0.24);
+// $modal-backdrop-opacity: 1;
+// // $modal-header-border-color:         $border-color ;
+// // $modal-footer-border-color:         $modal-header-border-color ;
+// // $modal-header-border-width:         $modal-content-border-width ;
+// // $modal-footer-border-width:         $modal-header-border-width ;
+// // $modal-header-padding-y:            $modal-inner-padding ;
+// // $modal-header-padding-x:            $modal-inner-padding ;
+// // $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x ; // Keep this for backwards compatibility
+
+$modal-sm: toREM(345);
+$modal-md: toREM(822);
+// // $modal-lg:                          800px ;
+//  $modal-xl: toREM(611);
+
+// // $modal-fade-transform:              translate(0, -50px) ;
+// // $modal-show-transform:              none ;
+// // $modal-transition:                  transform .3s ease-out ;
+// // $modal-scale-transform:             scale(1.02) ;
+// // // scss-docs-end modal-variables

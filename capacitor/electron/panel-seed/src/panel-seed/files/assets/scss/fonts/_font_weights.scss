@@ -1,0 +1,30 @@
+/* Fonts */
+$fontsPath: '/assets/fonts/';
+
+$font-weight-thin: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+//Other names (Used in Gotham and Gotham Condensed)
+//In Gotham bold is 600 and black is 700
+$font-weight-book: $font-weight-normal;
+$font-weight-extrablack: $font-weight-extrabold;
+$font-weight-ultra: $font-weight-black;
+
+//Display
+// $display1-weight: $font-weight-black-ultra;
+// $display2-weight: $font-weight-black;
+// $display3-weight: $font-weight-light;
+// $display4-weight: $font-weight-light;
+
+//btn
+// $btn-font-weight: $font-weight-xbold;
+
+

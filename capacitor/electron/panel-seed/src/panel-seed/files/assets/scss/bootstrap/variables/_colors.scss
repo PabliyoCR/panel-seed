@@ -1,0 +1,84 @@
+// // Color system
+
+// // scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #F4F4F4;
+// $gray-200: #e9ecef;
+// $gray-300: #dee2e6;
+// $gray-400: #ced4da;
+$gray-500: #757575;
+// $gray-600: #6c757d;
+// $gray-700: #495057;
+// $gray-800: #343a40;
+// $gray-900: #212529;
+$black: #000;
+// // scss-docs-end gray-color-variables
+
+// // fusv-disable
+// // scss-docs-start gray-colors-map
+$grays: ("100": $gray-100,
+  // "200": $gray-200,
+  // "300": $gray-300,
+  // "400": $gray-400,
+  "500": $gray-500,
+  // "600": $gray-600,
+  // "700": $gray-700,
+  // "800": $gray-800,
+  // "900": $gray-900
+);
+// // scss-docs-end gray-colors-map
+// // fusv-enable
+
+// // scss-docs-start color-variables
+// $blue:    #0d6efd;
+// $indigo:  #6610f2;
+// $purple:  #6f42c1;
+$pink: #FF91A3;
+$red: #FF0000;
+// $orange:  #fd7e14;
+// $yellow:  #ffc107;
+$green: #ACCC45;
+// $teal:    #20c997;
+$cyan: #30A9E0;
+// // scss-docs-end color-variables
+
+// // scss-docs-start colors-map
+$colors: ( // "blue":       $blue,
+  // "indigo":     $indigo,
+  // "purple":     $purple,
+  "pink": $pink,
+  "red": $red,
+  // "orange":     $orange,
+  // "yellow":     $yellow,
+  "green": $green,
+  // "teal":       $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-100,
+  // "gray-dark":  $gray-800
+);
+// // scss-docs-end colors-map
+
+// // scss-docs-start theme-color-variables
+$primary: $green;
+$secondary: $pink;
+$tertiary: $cyan;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $black;
+// // scss-docs-end theme-color-variables
+
+// // scss-docs-start theme-colors-map
+$theme-colors: ("primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  // "success":    $success,
+  // "info":       $info,
+  "white": $white,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark);
+// // scss-docs-end theme-colors-map

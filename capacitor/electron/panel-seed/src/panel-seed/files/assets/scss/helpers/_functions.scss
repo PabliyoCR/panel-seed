@@ -1,0 +1,37 @@
+// @each $breakpoint in map-keys($grid-breakpoints) {
+//     @include media-breakpoint-up($breakpoint) {
+//       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+//       @each $prop, $abbrev in (width: w, height: h) {
+//         @each $size, $length in $sizes {
+//           .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+//         }
+//       }
+//     }
+//   }
+@use 'sass:math';
+
+@function toVW($inPX: null, $screen: <%= vw %>) {
+  $inVW: $inPX / $screen * 100;
+  $val: #{$inVW}vw;
+  @return $val;
+}
+
+@function toVH($inPX: null, $screen: <%= vh %>) {
+  $inVW: $inPX / $screen * 100;
+  $val: #{$inVW}vh;
+  @return $val;
+}
+
+//Convert Pixels to REM using a based of 17px
+// to use another base just replace the base. Example toREM(30,18)
+@function toREM($inPX: null, $fontbase: <%= fontSize %>) {
+  $inVW: math.div($inPX, $fontbase);
+  $val: #{$inVW}rem;
+  @return $val;
+}
+
+@function toREMMobile($inPX: null, $fontbase: <%= fontSize %>) {
+  $inVW: math.div($inPX, $fontbase);
+  $val: #{$inVW}rem;
+  @return $val;
+}

@@ -1,0 +1,36 @@
+// // Accordion
+
+// // scss-docs-start accordion-variables
+// $accordion-padding-y: 0;
+$accordion-padding-x: toREM(19);
+$accordion-color: $black;
+$accordion-bg: $white;
+$accordion-border-width: 0;
+// $accordion-border-color: $white;
+$accordion-border-radius: toREM(20);
+// $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
+
+$accordion-body-padding-y: 0;
+$accordion-body-padding-x: toREM(19);
+
+// $accordion-button-padding-y:              $accordion-padding-y;
+// $accordion-button-padding-x:              $accordion-padding-x;
+$accordion-button-color: $black;
+$accordion-button-bg: $white;
+// $accordion-transition:                    $btn-transition, border-radius .15s ease;
+$accordion-button-active-bg: $white;
+$accordion-button-active-color: $black;
+
+$accordion-button-focus-border-color: transparent;
+$accordion-button-focus-box-shadow: none;
+
+$accordion-icon-width: toREM(20);
+$accordion-icon-color: $primary;
+// $accordion-icon-active-color:             $accordion-button-active-color;
+// $accordion-icon-transition:               transform .2s ease-in-out;
+// $accordion-icon-transform:                rotate(-180deg);
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='19.933' height='12.267' viewBox='0 0 19.933 12.267'><path id='Mask' d='M2.86-.488a1.682,1.682,0,0,1-2.369,0,1.659,1.659,0,0,1,0-2.356l9.476-9.423,9.476,9.423a1.659,1.659,0,0,1,0,2.356,1.682,1.682,0,0,1-2.369,0L9.967-7.555Z' transform='translate(19.933 0) rotate(180)' fill='#{$accordion-icon-color}'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='19.933' height='12.267' viewBox='0 0 19.933 12.267'><path id='Mask' d='M2.86-.488a1.682,1.682,0,0,1-2.369,0,1.659,1.659,0,0,1,0-2.356l9.476-9.423,9.476,9.423a1.659,1.659,0,0,1,0,2.356,1.682,1.682,0,0,1-2.369,0L9.967-7.555Z' transform='translate(19.933 0) rotate(180)' fill='#{$accordion-icon-color}'/></svg>");
+;
+// // scss-docs-end accordion-variables

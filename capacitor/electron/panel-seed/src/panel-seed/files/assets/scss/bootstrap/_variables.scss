@@ -1,0 +1,522 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+@import 'variables/colors';
+
+
+// Characters which are escaped by the escape-svg function
+// $escaped-characters: (
+//   ("<", "%3c"),
+//   (">", "%3e"),
+//   ("#", "%23"),
+//   ("(", "%28"),
+//   (")", "%29"),
+// ) ;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+// $enable-caret:                true ;
+// $enable-rounded:              true ;
+// $enable-shadows:              false ;
+// $enable-gradients:            false ;
+// $enable-transitions:          true ;
+// $enable-reduced-motion:       true ;
+// $enable-smooth-scroll:        true ;
+// $enable-grid-classes:         true ;
+// $enable-button-pointers:      true ;
+// $enable-rfs:                  true ;
+// $enable-validation-icons:     true ;
+// $enable-negative-margins:     false ;
+// $enable-deprecation-messages: true ;
+// $enable-important-utilities:  true ;
+
+// Prefix for :root CSS variables
+
+// $variable-prefix:             bs- ;
+
+// Gradient
+//
+// The gradient which is added to components if `$enable-gradients` is `true`
+// This gradient is also added to elements with `.bg-gradient`
+// scss-docs-start variable-gradient
+// $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0));
+// scss-docs-end variable-gradient
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+// $spacer: 1rem ;
+// $spacers: (
+//   0: 0,
+//   1: $spacer / 4,
+//   2: $spacer / 2,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+// ) ;
+
+// $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) ;
+// scss-docs-end spacer-variables-maps
+
+// Position
+//
+// Define the edge positioning anchors of the position utilities.
+
+// scss-docs-start position-map
+// $position-values: (
+//   0: 0,
+//   50: 50%,
+//   100: 100%
+// ) ;
+// scss-docs-end position-map
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $black;
+// $body-text-align:           null ;
+
+@import 'variables/links';
+
+
+// Paragraphs
+//
+// Style p element.
+
+// $paragraph-margin-bottom:   1rem ;
+
+@import 'variables/grid';
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// scss-docs-start border-variables
+// $border-width:                1px ;
+// $border-widths: (
+//   1: 1px,
+//   2: 2px,
+//   3: 3px,
+//   4: 4px,
+//   5: 5px
+// ) ;
+
+// $border-color:                $gray-300 ;
+// scss-docs-end border-variables
+
+// scss-docs-start border-radius-variables
+// $border-radius:               .25rem ;
+// $border-radius-sm:            .2rem ;
+// $border-radius-lg:            .3rem ;
+// $border-radius-pill:          50rem ;
+// scss-docs-end border-radius-variables
+
+// // scss-docs-start box-shadow-variables
+// $box-shadow:                  0 .5rem 1rem rgba($black, .15) ;
+// $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) ;
+// $box-shadow-lg:               0 1rem 3rem rgba($black, .175) ;
+// $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) ;
+// scss-docs-end box-shadow-variables
+
+// $component-active-color:      $white ;
+// $component-active-bg:         $primary ;
+
+// scss-docs-start caret-variables
+// $caret-width:                 .3em ;
+// $caret-vertical-align:        $caret-width * .85 ;
+// $caret-spacing:               $caret-width * .85 ;
+// scss-docs-end caret-variables
+
+// $transition-base:             all .2s ease-in-out ;
+// $transition-fade:             opacity .15s linear ;
+// scss-docs-start collapse-transition
+// $transition-collapse:         height .35s ease ;
+// scss-docs-end collapse-transition
+
+// stylelint-disable function-disallowed-list
+// scss-docs-start aspect-ratios
+// $aspect-ratios: (
+//   "1x1": 100%,
+//   "4x3": calc(3 / 4 * 100%),
+//   "16x9": calc(9 / 16 * 100%),
+//   "21x9": calc(9 / 21 * 100%)
+// ) ;
+// scss-docs-end aspect-ratios
+// stylelint-enable function-disallowed-list
+
+@import 'variables/typography';
+
+@import 'variables/tables';
+
+@import 'variables/buttons';
+
+
+@import 'variables/forms';
+
+
+// // Z-index master list
+// //
+// // Warning: Avoid customizing these values. They're used for a bird's eye view
+// // of components dependent on the z-axis and are designed to all work together.
+
+// // scss-docs-start zindex-stack
+// $zindex-dropdown:                   1000 ;
+// $zindex-sticky:                     1020 ;
+// $zindex-fixed:                      1030 ;
+// $zindex-modal-backdrop:             1040 ;
+// $zindex-offcanvas:                  1050 ;
+// $zindex-modal:                      1060 ;
+// $zindex-popover:                    1070 ;
+// $zindex-tooltip:                    1080 ;
+// // scss-docs-end zindex-stack
+
+
+@import 'variables/navNavbar';
+
+@import 'variables/dropdowns';
+
+
+// // Pagination
+
+// // scss-docs-start pagination-variables
+// $pagination-padding-y:              .375rem ;
+// $pagination-padding-x:              .75rem ;
+// $pagination-padding-y-sm:           .25rem ;
+// $pagination-padding-x-sm:           .5rem ;
+// $pagination-padding-y-lg:           .75rem ;
+// $pagination-padding-x-lg:           1.5rem ;
+
+// $pagination-color:                  $link-color ;
+// $pagination-bg:                     $white ;
+// $pagination-border-width:           $border-width ;
+// $pagination-border-radius:          $border-radius ;
+// $pagination-margin-start:           -$pagination-border-width ;
+// $pagination-border-color:           $gray-300 ;
+
+// $pagination-focus-color:            $link-hover-color ;
+// $pagination-focus-bg:               $gray-200 ;
+// $pagination-focus-box-shadow:       $input-btn-focus-box-shadow ;
+// $pagination-focus-outline:          0 ;
+
+// $pagination-hover-color:            $link-hover-color ;
+// $pagination-hover-bg:               $gray-200 ;
+// $pagination-hover-border-color:     $gray-300 ;
+
+// $pagination-active-color:           $component-active-color ;
+// $pagination-active-bg:              $component-active-bg ;
+// $pagination-active-border-color:    $pagination-active-bg ;
+
+// $pagination-disabled-color:         $gray-600 ;
+// $pagination-disabled-bg:            $white ;
+// $pagination-disabled-border-color:  $gray-300 ;
+
+// $pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out ;
+
+// $pagination-border-radius-sm:       $border-radius-sm ;
+// $pagination-border-radius-lg:       $border-radius-lg ;
+// // scss-docs-end pagination-variables
+
+@import 'variables/cards';
+
+@import 'variables/accordion';
+
+// // Tooltips
+
+// // scss-docs-start tooltip-variables
+// $tooltip-font-size:                 $font-size-sm ;
+// $tooltip-max-width:                 200px ;
+// $tooltip-color:                     $white ;
+// $tooltip-bg:                        $black ;
+// $tooltip-border-radius:             $border-radius ;
+// $tooltip-opacity:                   .9 ;
+// $tooltip-padding-y:                 $spacer / 4 ;
+// $tooltip-padding-x:                 $spacer / 2 ;
+// $tooltip-margin:                    0 ;
+
+// $tooltip-arrow-width:               .8rem ;
+// $tooltip-arrow-height:              .4rem ;
+// $tooltip-arrow-color:               $tooltip-bg ;
+// // scss-docs-end tooltip-variables
+
+// // Form tooltips must come after regular tooltips
+// // scss-docs-start tooltip-feedback-variables
+// $form-feedback-tooltip-padding-y:     $tooltip-padding-y ;
+// $form-feedback-tooltip-padding-x:     $tooltip-padding-x ;
+// $form-feedback-tooltip-font-size:     $tooltip-font-size ;
+// $form-feedback-tooltip-line-height:   null ;
+// $form-feedback-tooltip-opacity:       $tooltip-opacity ;
+// $form-feedback-tooltip-border-radius: $tooltip-border-radius ;
+// // scss-docs-start tooltip-feedback-variables
+
+
+// // Popovers
+
+// // scss-docs-start popover-variables
+// $popover-font-size:                 $font-size-sm ;
+// $popover-bg:                        $white ;
+// $popover-max-width:                 276px ;
+// $popover-border-width:              $border-width ;
+// $popover-border-color:              rgba($black, .2) ;
+// $popover-border-radius:             $border-radius-lg ;
+// $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) ;
+// $popover-box-shadow:                $box-shadow ;
+
+// $popover-header-bg:                 shade-color($popover-bg, 6%) ;
+// $popover-header-color:              $headings-color ;
+// $popover-header-padding-y:          .5rem ;
+// $popover-header-padding-x:          $spacer ;
+
+// $popover-body-color:                $body-color ;
+// $popover-body-padding-y:            $spacer ;
+// $popover-body-padding-x:            $spacer ;
+
+// $popover-arrow-width:               1rem ;
+// $popover-arrow-height:              .5rem ;
+// $popover-arrow-color:               $popover-bg ;
+
+// $popover-arrow-outer-color:         fade-in($popover-border-color, .05) ;
+// // scss-docs-end popover-variables
+
+
+// // Toasts
+
+// // scss-docs-start toast-variables
+// $toast-max-width:                   350px ;
+// $toast-padding-x:                   .75rem ;
+// $toast-padding-y:                   .5rem ;
+// $toast-font-size:                   .875rem ;
+// $toast-color:                       null ;
+// $toast-background-color:            rgba($white, .85) ;
+// $toast-border-width:                1px ;
+// $toast-border-color:                rgba(0, 0, 0, .1) ;
+// $toast-border-radius:               $border-radius ;
+// $toast-box-shadow:                  $box-shadow ;
+// $toast-spacing:                     $container-padding-x ;
+
+// $toast-header-color:                $gray-600 ;
+// $toast-header-background-color:     rgba($white, .85) ;
+// $toast-header-border-color:         rgba(0, 0, 0, .05) ;
+// // scss-docs-end toast-variables
+
+
+// // Badges
+
+// // scss-docs-start badge-variables
+// $badge-font-size:                   .75em ;
+// $badge-font-weight:                 $font-weight-bold ;
+// $badge-color:                       $white ;
+// $badge-padding-y:                   .35em ;
+// $badge-padding-x:                   .65em ;
+// $badge-border-radius:               $border-radius ;
+// // scss-docs-end badge-variables
+
+
+@import 'variables/modal';
+
+// // Alerts
+// //
+// // Define alert colors, border radius, and padding.
+
+// // scss-docs-start alert-variables
+// $alert-padding-y:               $spacer ;
+// $alert-padding-x:               $spacer ;
+// $alert-margin-bottom:           1rem ;
+// $alert-border-radius:           $border-radius ;
+// $alert-link-font-weight:        $font-weight-bold ;
+// $alert-border-width:            $border-width ;
+// $alert-bg-scale:                -80% ;
+// $alert-border-scale:            -70% ;
+// $alert-color-scale:             40% ;
+// $alert-dismissible-padding-r:   $alert-padding-x * 3 ; // 3x covers width of x plus default padding on either side
+// // scss-docs-end alert-variables
+
+
+// // Progress bars
+
+// // scss-docs-start progress-variables
+// $progress-height:                   1rem ;
+// $progress-font-size:                $font-size-base * .75 ;
+// $progress-bg:                       $gray-200 ;
+// $progress-border-radius:            $border-radius ;
+// $progress-box-shadow:               $box-shadow-inset ;
+// $progress-bar-color:                $white ;
+// $progress-bar-bg:                   $primary ;
+// $progress-bar-animation-timing:     1s linear infinite ;
+// $progress-bar-transition:           width .6s ease ;
+// // scss-docs-end progress-variables
+
+
+// // List group
+
+// // scss-docs-start list-group-variables
+// $list-group-color:                  $gray-900 ;
+// $list-group-bg:                     $white ;
+// $list-group-border-color:           rgba($black, .125) ;
+// $list-group-border-width:           $border-width ;
+// $list-group-border-radius:          $border-radius ;
+
+// $list-group-item-padding-y:         $spacer / 2 ;
+// $list-group-item-padding-x:         $spacer ;
+// $list-group-item-bg-scale:          -80% ;
+// $list-group-item-color-scale:       40% ;
+
+// $list-group-hover-bg:               $gray-100 ;
+// $list-group-active-color:           $component-active-color ;
+// $list-group-active-bg:              $component-active-bg ;
+// $list-group-active-border-color:    $list-group-active-bg ;
+
+// $list-group-disabled-color:         $gray-600 ;
+// $list-group-disabled-bg:            $list-group-bg ;
+
+// $list-group-action-color:           $gray-700 ;
+// $list-group-action-hover-color:     $list-group-action-color ;
+
+// $list-group-action-active-color:    $body-color ;
+// $list-group-action-active-bg:       $gray-200 ;
+// // scss-docs-end list-group-variables
+
+
+// // Image thumbnails
+
+// // scss-docs-start thumbnail-variables
+// $thumbnail-padding:                 .25rem ;
+// $thumbnail-bg:                      $body-bg ;
+// $thumbnail-border-width:            $border-width ;
+// $thumbnail-border-color:            $gray-300 ;
+// $thumbnail-border-radius:           $border-radius ;
+// $thumbnail-box-shadow:              $box-shadow-sm ;
+// // scss-docs-end thumbnail-variables
+
+
+// // Figures
+
+// // scss-docs-start figure-variables
+// $figure-caption-font-size:          $small-font-size ;
+// $figure-caption-color:              $gray-600 ;
+// // scss-docs-end figure-variables
+
+
+// // Breadcrumbs
+
+// // scss-docs-start breadcrumb-variables
+// $breadcrumb-font-size:              null ;
+// $breadcrumb-padding-y:              0 ;
+// $breadcrumb-padding-x:              0 ;
+// $breadcrumb-item-padding-x:         .5rem ;
+// $breadcrumb-margin-bottom:          1rem ;
+// $breadcrumb-bg:                     null ;
+// $breadcrumb-divider-color:          $gray-600 ;
+// $breadcrumb-active-color:           $gray-600 ;
+// $breadcrumb-divider:                quote("/") ;
+// $breadcrumb-divider-flipped:        $breadcrumb-divider ;
+// $breadcrumb-border-radius:          null ;
+// // scss-docs-end breadcrumb-variables
+
+// // Carousel
+
+// // scss-docs-start carousel-variables
+// $carousel-control-color:             $white ;
+// $carousel-control-width:             15% ;
+// $carousel-control-opacity:           .5 ;
+// $carousel-control-hover-opacity:     .9 ;
+// $carousel-control-transition:        opacity .15s ease ;
+
+// $carousel-indicator-width:           30px ;
+// $carousel-indicator-height:          3px ;
+// $carousel-indicator-hit-area-height: 10px ;
+// $carousel-indicator-spacer:          3px ;
+// $carousel-indicator-opacity:         .5 ;
+// $carousel-indicator-active-bg:       $white ;
+// $carousel-indicator-active-opacity:  1 ;
+// $carousel-indicator-transition:      opacity .6s ease ;
+
+// $carousel-caption-width:             70% ;
+// $carousel-caption-color:             $white ;
+// $carousel-caption-padding-y:         1.25rem ;
+// $carousel-caption-spacer:            1.25rem ;
+
+// $carousel-control-icon-width:        2rem ;
+
+// $carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") ;
+// $carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") ;
+
+// $carousel-transition-duration:       .6s ;
+// $carousel-transition:                transform $carousel-transition-duration ease-in-out ; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+// $carousel-dark-indicator-active-bg:  $black ;
+// $carousel-dark-caption-color:        $black ;
+// $carousel-dark-control-icon-filter:  invert(1) grayscale(100) ;
+// // scss-docs-end carousel-variables
+
+
+// // Spinners
+
+// // scss-docs-start spinner-variables
+// $spinner-width:           2rem ;
+// $spinner-height:          $spinner-width ;
+// $spinner-vertical-align:  -.125em ;
+// $spinner-border-width:    .25em ;
+// $spinner-animation-speed: .75s ;
+
+// $spinner-width-sm:        1rem ;
+// $spinner-height-sm:       $spinner-width-sm ;
+// $spinner-border-width-sm: .2em ;
+// // scss-docs-end spinner-variables
+
+
+// // Close
+
+// // scss-docs-start close-variables
+// $btn-close-width:            1em ;
+// $btn-close-height:           $btn-close-width ;
+// $btn-close-padding-x:        .25em ;
+// $btn-close-padding-y:        $btn-close-padding-x ;
+// $btn-close-color:            $black ;
+// $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") ;
+// $btn-close-focus-shadow:     $input-btn-focus-box-shadow ;
+// $btn-close-opacity:          .5 ;
+// $btn-close-hover-opacity:    .75 ;
+// $btn-close-focus-opacity:    1 ;
+// $btn-close-disabled-opacity: .25 ;
+// $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) ;
+// // scss-docs-end close-variables
+
+
+// // Offcanvas
+
+// // scss-docs-start offcanvas-variables
+// $offcanvas-padding-y:               $modal-inner-padding ;
+// $offcanvas-padding-x:               $modal-inner-padding ;
+// $offcanvas-horizontal-width:        400px ;
+// $offcanvas-vertical-height:         30vh ;
+// $offcanvas-transition-duration:     .3s ;
+// $offcanvas-border-color:            $modal-content-border-color ;
+// $offcanvas-border-width:            $modal-content-border-width ;
+// $offcanvas-title-line-height:       $modal-title-line-height ;
+// $offcanvas-bg-color:                $modal-content-bg ;
+// $offcanvas-color:                   $modal-content-color ;
+// $offcanvas-box-shadow:              $modal-content-box-shadow-xs ;
+// // scss-docs-end offcanvas-variables
+
+// // Code
+
+// $code-font-size:                    $small-font-size ;
+// $code-color:                        $pink ;
+
+// $kbd-padding-y:                     .2rem ;
+// $kbd-padding-x:                     .4rem ;
+// $kbd-font-size:                     $code-font-size ;
+// $kbd-color:                         $white ;
+// $kbd-bg:                            $gray-900 ;
+
+// $pre-color:                         null ;

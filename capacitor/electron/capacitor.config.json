@@ -1,0 +1,6 @@
+{
+  "appId": "com.havas.panel",
+  "appName": "panel-seed-master",
+  "webDir": "../webroot",
+  "bundledWebRuntime": false
+}

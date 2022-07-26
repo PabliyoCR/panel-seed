@@ -1,0 +1,39 @@
+@import "./assets/scss/settings";
+
+:root {
+	--app-height: 100vh;
+  --app-width: 100vw;
+}
+
+html {
+  font-size: toVW(<%= fontSize %>);
+
+  @media (min-aspect-ratio: 16/9), (min-aspect-ratio: 9/16) {
+	  font-size: toVH(<%= fontSize %>);
+  }
+}
+
+.container-landscape {
+	height: calc(9/16*var(--app-width));
+  width: var(--app-width);
+	
+  @media (min-aspect-ratio: 16/9) {
+	  height: var(--app-height);
+	  width: calc(16/9*var(--app-height));
+  }
+}
+
+.container-portrait {
+	height: calc(16/9*var(--app-width));
+	width: var(--app-width);
+
+  @media (min-aspect-ratio: 9/16) {
+	  height: var(--app-height);
+    width: calc(9/16*var(--app-height));
+  }
+}
+
+.container-landscape, .container-portrait {
+  position: relative;
+  overflow: hidden;
+}

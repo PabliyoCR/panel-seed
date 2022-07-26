@@ -1,0 +1,20 @@
+// // // Cards
+
+// // // scss-docs-start card-variables
+// $card-spacer-y:                        0;
+// $card-spacer-x:                        0;
+// // $card-title-spacer-y:               $spacer / 2 ;
+$card-border-width: 1px;
+$card-border-radius: toREM(20);
+$card-border-color: $primary;
+$card-inner-border-radius: subtract($card-border-radius, $card-border-width);
+// // $card-cap-padding-y:                $card-spacer-y / 2 ;
+// // $card-cap-padding-x:                $card-spacer-x ;
+// // $card-cap-bg:                       rgba($black, .03) ;
+// // $card-cap-color:                    null ;
+// // $card-height:                       null ;
+// // $card-color:                        null ;
+// // $card-bg:                           $white ;
+// // $card-img-overlay-padding:          $spacer ;
+// // $card-group-margin:                 $grid-gutter-width / 2 ;
+// // // scss-docs-end card-variables
