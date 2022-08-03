@@ -2,6 +2,7 @@
 # In order to prevent that, we remove the initial "."
 # And the CLI then renames it
 app
+!panel-seed/src/panel-seed/files/app
 node_modules
 build
 dist
