@@ -43,7 +43,7 @@ export class TrackingDirective {
     console.log(trackData);
 
     try {
-      (<any>window).API_ELECTRON.ipcSend('create-tracking', trackData)
+      (<any>window).API_ELECTRON.send('create-tracking', trackData)
     } catch {
       console.log("No se enuentra el servicio ipSend");
     }
@@ -52,7 +52,7 @@ export class TrackingDirective {
   @HostListener('document:keydown.esc', ['$event'])
   onEscDown(e: any) {
     try {
-      (<any>window).API_ELECTRON.closeAPP()
+      (<any>window).API_ELECTRON.send('close-application')
     } catch {
       console.log("No se enuentra el servicio ipSend");
     }
